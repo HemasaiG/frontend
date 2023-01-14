@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>New Post</h1>
+    <form #postForm="ngForm" >
+
+      <textarea [(ngModel)]="postData" name="bio" class="form-control"></textarea>
+      <br>
+    <div class="row">
+    <button type="submit"   (click)="post()">Post</button>
+      </div>
+  </form>
+  </div>
+
+
+
+
+  <div class="callout" *ngFor="let value of apiService.feedposts">
+    <div class="callout-header"></div>
+
+    <div class="callout-container">
+      <p style="font-weight: bold; font-size: large;">{{value.message}}</p>
+    </div>
+  </div>

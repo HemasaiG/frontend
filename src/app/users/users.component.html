@@ -1,0 +1,6 @@
+
+<div >
+  <ul *ngFor="let user of apiService.users">
+    <li class="chip"[routerLink]="['/profile',user._id]" routerLinkActive="router-link-active">{{user.name}}</li>
+  </ul>
+</div>

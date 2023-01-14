@@ -1,0 +1,16 @@
+<div class="topnav">
+  <a>ServoConnect</a>
+
+    <a class="home" routerLink="/feed" *ngIf="authService.isAuthenticated()">Feed</a>
+    <a href="#contact" id="users" routerLink="/users" *ngIf="authService.isAuthenticated()">Users</a>
+    <div id="navbar-right">
+    <a [routerLink]="['/login']" routerLinkActive="true" *ngIf="!authService.isAuthenticated()">Login</a>
+    <a  *ngIf="authService.isAuthenticated()" (click)="authService.logout()">LogOut</a>
+    </div>
+</div>
+
+
+
+
+
+
